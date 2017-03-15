@@ -4,18 +4,19 @@
 
 import React, {PropTypes} from 'react';
 import {
-    IframeWrapper,
-    MediaOverlay,
+  IframeWrapper,
+  MediaOverlay,
 } from 'components';
 
 
 const MediaUnit = (props) => {
   const {src, height, overlay, onDismiss, children, loadingBarActions} = props; // eslint-disable-line
   return (
-      <div
-          style={{position: 'relative', height: height, width: '100%', transition: 'opacity 1s ease-out'}}>
+      <div style={{position: 'relative', height: height, width: '100%', transition: 'opacity 1s ease-out'}}>
         <MediaOverlay onDismiss={onDismiss}
-                      isOpen={overlay}>{children}</MediaOverlay>
+                      isOpen={overlay}>
+          {children}
+          </MediaOverlay>
         <IframeWrapper src={src} loadingBarActions={loadingBarActions}/>
       </div>
   );
