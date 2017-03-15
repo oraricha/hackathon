@@ -1,0 +1,57 @@
+
+$tablet: 1240px;
+$dark-grey: #252424 !default;
+$page-header-height: 340px;
+
+.main {
+  margin-top: $page-header-height;
+  background: $dark-grey;
+  box-shadow: -10px -10px 60px 4px rgba(7, 7, 7, 0.75);
+  position: relative;
+}
+
+.sm {
+  display: none;
+}
+
+.md, .lg {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.xlg {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .lg {
+    display: none;
+  }
+
+  .sm, .md {
+    display: block;
+    margin-bottom: 11px;
+  }
+
+  .xlg {
+    display: none;
+  }
+}
+
+@media (min-width: 950px) {
+
+  .md {
+    display: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .xlg {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .sm, .md {
+    display: none;
+  }
+}

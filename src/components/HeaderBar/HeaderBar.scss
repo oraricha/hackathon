@@ -1,0 +1,87 @@
+$tablet: 1050px;
+.container {
+  display: block;
+    .headers {
+      margin-right: 5px;
+      .related-list {
+      font-family: 'Lato';
+      font-weight: 800;
+      font-size: 12px;
+      margin: 22px 5px 0;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block;
+      outline: none;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 2.4px;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      .publishers {
+        color: #FFFFFF;
+        :after {
+          background: #FFFFFF;
+        }
+      }
+      .advertisers {
+        color: #FFFFFF;
+        :after {
+          background: #FFFFFF;
+        }
+      }
+      .about {
+        color: #FFFFFF;
+        :after {
+          background: #FFFFFF;
+        }
+      }
+
+      :after {
+        position: absolute;
+        top: 65%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        content: '';
+        opacity: 0;
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+        transition: opacity 0.3s, transform 0.3s;
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        transform: translateY(-10px);
+      }
+
+      :hover::after, .selected:after {
+        height: 2px;
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    .headers {
+      .related-list {
+        font-size: 11px;
+        letter-spacing: 1.8px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .container {
+    display: none;
+  }
+}

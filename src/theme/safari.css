@@ -1,0 +1,15 @@
+/* Safari 6.1+ (10.0 is the latest version of Safari at this time) */
+
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0)
+{ @media {
+    body {
+    // IMPORTANT: optimize google webfonts for mobile safari on iphone
+    /*-webkit-text-stroke-width: 0.4px;*/
+    /*text-rendering: optimizeLegibility !important;*/
+    }
+
+    .safari_only {
+        color:#0000FF;
+        background-color:#CCCCCC;
+    }
+}}

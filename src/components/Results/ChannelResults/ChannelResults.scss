@@ -1,0 +1,138 @@
+
+.channel-suggestions {
+  width: 100%;
+
+  ul {
+    list-style-type:none;
+    li {
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: #fff;
+        h4 {
+          opacity: 0.7;
+        }
+      }
+      a:hover {
+        h4 {
+          opacity: 1.0;
+          transition: opacity 0.3s ease-out;
+        }
+      }
+    }
+  }
+
+  // desktop
+  &.list {
+    position: relative;
+
+    ul {
+      padding: 0;
+    }
+  }
+
+  .flag__image {
+
+    padding: 10px 0 0;
+
+    img {
+      display: block;
+      max-width: none;
+      border-radius: 50%;
+      background: white;
+      overflow: hidden;
+      height: 40px;
+      width: 40px;
+    }
+
+    .flag--rev & {
+      padding-right: 0;
+      padding-left: 10px;
+    }
+  }
+
+  .channel-related {
+    width: 100%;
+    padding: 4px 0;
+    margin: 4px;
+    height: auto;
+    transition: all 0.3s ease;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #A8A7A7;
+  }
+
+  .channel-bottom-line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    margin: 20px 20px 0 50px;
+  }
+
+  .channel-title {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+
+  // mobile
+  &.mobile-list {
+    width: 98%;
+    left: 1%;
+    margin-top: 5px;
+    position: absolute;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    ul {
+      padding: 0;
+      margin-bottom: 0;
+      margin-left: 10%;
+    }
+  }
+
+  .channel-related-mobile {
+    margin: 0 4px;
+    height: auto;
+    transition: all 0.3s ease;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #A8A7A7;
+    display: inline-block;
+  }
+
+  .flag__image__mobile {
+
+    padding: 0 4px;
+
+    img {
+      display: block;
+      max-width: none;
+      border-radius: 50%;
+      background: white;
+      overflow: hidden;
+      height: 30px;
+      width: 30px;
+    }
+
+    .flag--rev & {
+      padding-right: 0;
+    }
+  }
+
+  .channel-title-mobile {
+    color: #fff;
+    font-size: 13px;
+    text-transform: capitalize;
+  }
+
+  .channel-medias-number {
+    color: #fff;
+    font-size: 14px;
+    font-family: Lato;
+    text-transform: capitalize;
+  }
+}

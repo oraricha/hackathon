@@ -1,0 +1,40 @@
+$dark-grey: #252424 !default;
+$tablet: 640px;
+$page-header-height: 320px;
+
+.main {
+  margin-top: $page-header-height;
+  background: $dark-grey;
+  box-shadow: 0 2px 20px 4px rgba(7, 7, 7, 0.6);
+  position: relative;
+}
+
+.sm {
+  display: none;
+}
+
+.xlg {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .lg {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+
+  .xlg {
+    display: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .xlg {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

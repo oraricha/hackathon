@@ -1,0 +1,109 @@
+.menu {
+  width: 100%;
+  height: 11.35%;
+  font-family: 'Lato';
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: left;
+  letter-spacing: 2.4px;
+  position: relative;
+  display: table;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+
+  div {
+    width: 100%;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.30);
+    padding-left: 20px;
+    opacity: 0;
+    vertical-align: middle;
+    display: table-cell;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  .news {
+    background: #3E81E6;
+    z-index: 8;
+    position: relative;
+    &.menu-open {
+      animation: fadein 0.066s 0s 1 alternate ease-in-out both;
+    }
+  }
+  .sport {
+    background: #864AFF;
+    z-index: 7;
+    position: relative;
+    &.menu-open {
+      animation: fadein 0.066s 0.050s 1 alternate ease-in-out both;
+    }
+  }
+  .entertainment {
+    background: #EE9802;
+    z-index: 6;
+    position: relative;
+    &.menu-open {
+      animation: fadein 0.066s 0.110s 1 alternate ease-in-out both;
+    }
+  }
+  .tech {
+    background: #FF5498;
+    z-index: 5;
+    position: relative;
+    &.menu-open {
+      animation: fadein 0.066s 0.170s 1 alternate ease-in-out both;
+    }
+  }
+  .lifestyle {
+    background: #1EDD8E;
+    z-index: 4;
+    position: relative;
+    &.menu-open {
+      animation: fadein 0.066s 0.230s 1 alternate ease-in-out both;
+    }
+  }
+  .publishers, .advertisers, .about {
+    position: relative;
+  }
+  .publishers {
+    background-color: #212121;
+    z-index: 3;
+    &.menu-open {
+      animation: fadein 0.066s 0.290s 1 alternate ease-in-out both;
+    }
+  }
+  .advertisers {
+    background-color: #232222;
+
+    z-index: 2;
+    &.menu-open {
+      animation: fadein 0.066s 0.350s 1 alternate ease-in-out both;
+    }
+  }
+  .about {
+    background-color: #252424;
+    z-index: 1;
+    &.menu-open {
+      animation: fadein 0.066s 0.410s 1 alternate ease-in-out both;
+    }
+  }
+  .start {
+    background: #EE2E3D;
+    z-index: 0;
+    position: relative;
+    &.menu-open {
+      animation: fadein 0.066s 0.475s 1 alternate ease-in-out both;
+    }
+  }
+
+  @keyframes fadein {
+    0% { opacity:0; }
+    100% { opacity:1; }
+  }
+}

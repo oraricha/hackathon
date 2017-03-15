@@ -1,0 +1,62 @@
+.growing-circle-bg {
+  vertical-align: inherit;
+
+  &.is-closed:before {
+    content: "";
+    transform: scale(1);
+    animation: scale-shrink .8s forwards 0s;
+  }
+  &.is-open:before {
+    content: "";
+    transform: scale(0);
+    animation: scale-grow .8s forwards 0s;
+  }
+
+  &:before {
+    transform-origin: top right;
+    border-radius: 50%;
+    transform: scale(0) translateZ(0);
+    width: 200%;
+    height: 200%;
+    min-height: 1000px;
+    top: -40%;
+    right: -55%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    position: fixed;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0));
+  }
+}
+
+.growing-circle-content {
+  text-align: center;
+}
+
+.growing-circle-bg {
+  & + .growing-circle-content {
+    transition: .3s ease-out 0s;
+    opacity: 0;
+  }
+
+  &.is-open + .growing-circle-content {
+    transition: .3s ease-out .2s;
+    opacity: 1;
+  }
+}
+
+
+// =============================================
+// Keyframe Animations
+// =============================================
+
+
+// animations for the mobile share menu (material design)
+@keyframes scale-grow {
+  0%    {transform: scale(0);}
+  100%  {transform: scale(1);}
+}
+
+@keyframes scale-shrink {
+  0%    {transform: scale(1);}
+  100%  {transform: scale(0);}
+}

@@ -1,0 +1,20 @@
+$page-header-height: 300px;
+
+.container {
+  height: $page-header-height;
+  width: 100%;
+  position: fixed;
+  top: 8%;
+
+  .image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .header {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+  }
+}

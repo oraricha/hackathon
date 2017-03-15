@@ -1,0 +1,35 @@
+.growing-overlay {
+  margin-top: 80px;
+}
+
+.overlay-body {
+  margin-top: 93px;
+
+  .btn-close {
+    transition: .2s ease-out;
+    position: absolute;
+    top: 8px;
+    right: -19px;
+    color: white;
+    line-height: 60px;
+    width: 70px;
+    background: none;
+    border: 0;
+    outline: 0;
+
+    &.open {
+      animation: rotate-40 1.5s 1 ease-out forwards;
+    }
+  }
+}
+
+
+// =============================================
+// Keyframe Animations
+// =============================================
+
+
+@keyframes rotate-40 {
+  0%    {transform: rotate(-60deg)}
+  100%  {transform: rotate(0deg);}
+}

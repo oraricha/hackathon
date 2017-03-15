@@ -1,0 +1,185 @@
+$tablet: 425px;
+$facebook: #3B5998;
+$twitter: #55ACEE;
+$whatsapp: #43d854;
+$link: #0E9388;
+$link-copied: #1EDD8E;
+$email: #FFBD00;
+$fb-messenger: #0084FF;
+
+$size-normal: 47px;
+$size-large: 70px;
+
+@keyframes linkCopied {
+  0% {
+    visibility: hidden;
+    transform: scale(0) rotateZ(-145deg);
+  }
+  100% {
+    visibility: visible;
+    transform: scale(1) rotateZ(-145deg);
+  }
+}
+
+.btn-share {
+  font-size: 0;
+  background: #000;
+  border: 0;
+  outline: none;
+  color: white;
+  border-radius: 50%;
+  height: $size-normal;
+  width: $size-normal;
+  transition: background 0.2s ease-in;
+
+  &:before {
+    font-size: 20px;
+    transition: 0.2s ease-in;
+  }
+
+  &.btn-link {
+    transform: rotateZ(145deg);
+
+    &:hover {
+      background: $link;
+    }
+
+    &:active {
+      &:before {
+        opacity: 0;
+      }
+
+      .link-copied {
+        background: $link-copied;
+        opacity: 1;
+      }
+    }
+
+    &:not(:active) {
+      .link-copied {
+        transition: background-color,opacity 2s step-end;
+      }
+    }
+
+    &.is-copied {
+      .link-copied {
+        animation: linkCopied .3s forwards linear;
+      }
+    }
+
+    .link-copied {
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      background: $link-copied;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      font-size: 20px;
+      transform: rotateZ(-145deg);
+      line-height: $size-normal;
+      transition: 0.1s ease-in;
+
+      &:after {
+        content: "copied";
+        text-transform: capitalize;
+        font-size: 10px;
+        position: absolute;
+        bottom: -32px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Lato", Lato, sans-serif;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &.btn-facebook:hover {
+    background: $facebook;
+  }
+
+  &.btn-twitter:hover {
+    background: $twitter;
+  }
+
+  &.btn-whatsapp:hover {
+    background: $whatsapp;
+  }
+
+  &.btn-mail:hover {
+    background: $email;
+  }
+
+  &.btn-embed:hover {
+    background: darkorange;
+  }
+
+  &.btn-embed[disabled] {
+    opacity: 0.5;
+  }
+
+  &.btn-embed[disabled]:hover {
+    background: #000;
+  }
+
+  &.btn-messenger:hover {
+    background: $fb-messenger;
+  }
+}
+
+.btn-whatsapp, .btn-messenger {
+  display: none;
+}
+
+.is-color {
+  &.btn-facebook {
+    background: $facebook;
+  }
+
+  &.btn-twitter {
+    background: $twitter;
+  }
+
+  &.btn-whatsapp {
+    background: $whatsapp;
+  }
+
+  &.btn-link {
+    background: $link;
+  }
+
+  &.btn-email {
+    background: $email;
+  }
+
+  &.btn-messenger {
+    background: $fb-messenger;
+  }
+}
+
+.btn-share {
+  &.large {
+    height: $size-large;
+    width: $size-large;
+
+    &:before {
+      font-size: 26px;
+    }
+
+    .link-copied {
+      line-height: $size-large;
+    }
+  }
+}
+
+
+@media (max-width: $tablet) {
+  .btn-whatsapp, .btn-messenger {
+    display: inline-block;
+  }
+
+  .btn-link, .btn-embed {
+    display: none;
+  }
+}

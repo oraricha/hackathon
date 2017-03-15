@@ -1,0 +1,46 @@
+$tablet: 425px;
+
+.flag {
+  display: table;
+}
+
+.flag__image,
+.flag__body {
+  display: table-cell;
+  vertical-align: middle;
+
+  .flag--top & {
+    vertical-align: top;
+  }
+
+  .flag--bottom & {
+    vertical-align: bottom;
+  }
+}
+
+.flag__image {
+  padding-right: 30px;
+
+  > img {
+    display: block;
+    max-width: none;
+    border-radius: 50%;
+    height: 96px;
+    width: 96px;
+    background: white;
+    overflow: hidden;
+  }
+
+  .flag--rev & {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+}
+
+.flag__body {
+}
+
+@media (max-width: $tablet) {
+  .flag {
+  }
+}

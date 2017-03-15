@@ -1,0 +1,27 @@
+machine:
+  services:
+    - docker
+
+dependencies:
+  pre:
+    - pip install awsebcli awscli
+    - bash ./aws/setup-eb.sh
+  override:
+    - docker build -t apester/destination-client:development -f DockerfileStage .
+
+test:
+  override:
+    - echo 'success'
+
+deployment:
+  staging:
+    branch: development
+    owner: Qmerce
+    commands:
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push apester/destination-client:development
+      - cd aws && bash create_application_version.sh
+      - cd aws && eb deploy destination-client-stage --version development --profile default > deploy.log
+      - curl --data "destination client development branch has been deployed to stage env" https://apester.slack.com/services/hooks/slackbot\?token\=7Fcf4AG5YNavJmtzeCP5MzqU\&channel\=%23free_mason
+      - curl --data "Deploy outcome -" https://apester.slack.com/services/hooks/slackbot\?token\=7Fcf4AG5YNavJmtzeCP5MzqU\&channel\=%23free_mason
+      - curl --data "$(cat aws/deploy.log)" https://apester.slack.com/services/hooks/slackbot\?token\=7Fcf4AG5YNavJmtzeCP5MzqU\&channel\=%23free_mason

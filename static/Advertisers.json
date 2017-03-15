@@ -1,0 +1,87 @@
+{
+  "title": "<div class=\"header\">Break Through the Noise</div><div class=\"subHeader\"><i>Apester enables advertisers to get inside the content,<br> out of the noise of publisher sites. </i></div>",
+  "formMessage": "Contact us for information on reach and engaging audiences in the best real estate online",
+  "medias": [
+    {
+      "placementType": "medium",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "city",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": "<h3>Leverage Apester’s units to deliver <i>relevant, engaging, enriched messages</i> to your audiences. Consumers won’t miss them.</h3>"
+          }
+        }
+      ],
+      "tags": ["DELIVER MESSAGES ", "WITHIN THE CONTENT"]
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "susceptible",
+        "type": "static"
+      },
+      "backgroundColor": "#000000",
+      "tags": ["REACH THE USERS"]
+    },
+    {
+      "placementType": "small",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "position": {
+                    "top": 0.02919186827956989,
+                    "left": 0,
+                    "height": 0.9408602150537635,
+                    "width": 1
+                  },
+                  "path": "discover",
+                  "uploadId": "14856525872540",
+                  "isBeingUploaded": false,
+                  "type": "static"
+                },
+                "position": [
+                  0,
+                  1
+                ]
+              }
+            ]
+          },
+          "title": {
+            "value": ""
+          }
+        }
+      ],
+      "tags": ["DISCOVER OUR UNITS"]
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "increased",
+        "type": "static"
+      },
+      "backgroundColor": "#FFCD00",
+      "tags": ["ENGAGE THE USERS"]
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "deliverMessages",
+        "type": "static"
+      },
+      "backgroundColor": "#E83447",
+      "tags": []
+    }
+  ]
+}

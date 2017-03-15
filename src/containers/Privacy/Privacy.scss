@@ -1,0 +1,40 @@
+
+.main {
+  margin: 20px 0;
+  background-color: rgba(37,36,36,1);
+  color: #FFFFFF;
+
+  .article-header {
+    color: #2A2A2A;
+    padding: 20px 0;
+    border-bottom: 1px solid #f4f3f3;
+  }
+
+  article {
+    width: 80%;
+    margin: 0 auto
+  }
+
+  section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  h1 {
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px auto;
+    width: 75%;
+  }
+
+  h4 {
+    margin: 0;
+    font-style: italic;
+    font-weight: 800;
+  }
+
+  p {
+    margin: 5px;
+  }
+
+}

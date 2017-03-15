@@ -1,0 +1,32 @@
+
+.box {
+  user-select: none;
+  &:hover {
+    -webkit-animation: hover-scale .8s;
+    animation: hover-scale .8s;
+  }
+}
+
+@keyframes hover-scale {
+  30% {
+    transform: scale(0.9)
+  }
+  60% {
+    transform: scale(1.05)
+  }
+  100% {
+    transform: scale(1)
+  }
+}
+
+@-webkit-keyframes hover-scale {
+  30% {
+    transform: scale(0.9)
+  }
+  60% {
+    transform: scale(1.05)
+  }
+  100% {
+    transform: scale(1)
+  }
+}

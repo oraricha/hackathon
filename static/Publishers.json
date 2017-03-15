@@ -1,0 +1,266 @@
+{
+  "title": "<div class=\"header\">Deliver The Experiences Readers Love</div><div class=\"subHeader\">Join over 1,500 premium publishers in more than 100 countries</div>",
+  "formMessage": "Contact us to discover how we can help you adapt to the new paradigm in content",
+  "medias": [
+    {
+      "placementType": "medium",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "consumer",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": "<h4>Consumer media consumption behaviors and demands have radically changed over the last decade. </h4>"
+          }
+        }
+      ],
+      "tags": ["DELIVER MESSAGES ", "WITHIN THE CONTENT"]
+    },
+    {
+      "placementType": "medium",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "devices",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": "<h3>Mobile devices allow consumers to instantly access limitless content anytime, anywhere.</h3>"
+          }
+        }
+      ],
+      "tags": ["REACH THE USERS"]
+    },
+    {
+      "placementType": "medium",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "fundamentally",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": "<h3>The rise of social media has fundamentally changed how content is experienced, and readers’ expectations of their relationship with content.</h3>"
+          }
+        }
+      ],
+      "tags": []
+    },
+    {
+      "placementType": "medium",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "crowds",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": "<h3><i>It is no longer enough to write a story and distribute it.</i></h3><h4>Readers demand engagement, conversation, and to be part of the storytelling. They want their voice to be heard.</h4>"
+          }
+        }
+      ],
+      "tags": []
+    },
+    {
+      "placementType": "small",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "demands",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": "<h3><i>With Apester, Publishers are empowered to meet the demands of the new content age.</i></h3><h4>Apester’s experiential content units deliver the <i>engaging, fun, memorable experiences</i> readers expect.</h4>"
+          }
+        }
+      ],
+      "tags": []
+    },
+    {
+      "placementType": "small",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "jambo",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": ""
+          }
+        }
+      ],
+      "tags": []
+    },
+    {
+      "placementType": "small",
+      "teasers": [
+        {
+          "image": {
+            "background": [
+              {
+                "image": {
+                  "path": "visits",
+                  "type": "static"
+                }
+              }
+            ]
+          },
+          "title": {
+            "value": ""
+          }
+        }
+      ],
+      "tags": []
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "visits",
+        "type": "static"
+      },
+      "backgroundColor": "#000000",
+      "tags": ["INCREASE IN PAGE VISITS"]
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "brand",
+        "type": "static"
+      },
+      "backgroundColor": "#000000",
+      "tags": ["HIGHER BRAND LIFT"]
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "daily",
+        "type": "static"
+      },
+      "backgroundColor": "#1EDD8E",
+      "tags": ["DID YOU KNOW?"]
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "aol",
+        "type": "static"
+      },
+      "name": "Aol.",
+      "publisherId": "54dd3a9466925411359be4b7",
+      "backgroundColor": "#FFFFFF",
+      "tags": []
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "cnet",
+        "type": "static"
+      },
+      "name": "C|net.",
+      "publisherId" : "568d7ae0ed968df505abc3b6",
+      "backgroundColor": "#FFFFFF",
+      "tags": []
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "fox",
+        "type": "static"
+      },
+      "name": "FOX",
+      "publisherId": "55953a0feba60c9f04d9e5af",
+      "backgroundColor": "#CBCBCB",
+      "tags": []
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "hot",
+        "type": "static"
+      },
+      "name": "H",
+      "backgroundColor": "#0F7B63",
+      "publisherId": "563a19afcdaa05026826b3f0",
+      "tags": []
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "hl",
+        "type": "static"
+      },
+      "name": "H.L.",
+      "publisherId": "564c9877ab85074b2a252a63",
+      "backgroundColor": "#FFFFFF",
+      "tags": []
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "star",
+        "type": "static"
+      },
+      "name": "Star",
+      "backgroundColor": "#DA2434",
+      "publisherId": "55754c580031fc076543ddfe",
+      "tags": []
+    },
+    {
+      "placementType": "publisher",
+      "image": {
+        "path": "tel",
+        "type": "static"
+      },
+      "name": "Telegraph",
+      "backgroundColor": "#FFFFFF",
+      "publisherId": "54c7a9b285e2f62843b07317",
+      "tags": []
+    },
+    {
+      "placementType": "conversation",
+      "image": {
+        "path": "conversation",
+        "type": "static"
+      },
+      "backgroundColor": "#FFCD00",
+      "tags": []
+    }
+  ]
+}

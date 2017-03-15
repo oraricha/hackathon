@@ -1,0 +1,47 @@
+
+$tablet: 1240px;
+
+.sm {
+  display: none;
+}
+
+.md, .lg {
+  display: block;
+  margin-bottom: 11px;
+}
+
+.xlg {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .lg {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+
+  .xlg {
+    display: none;
+  }
+}
+
+@media (min-width: 950px) {
+
+  .md {
+    display: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .xlg {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .sm, .md {
+    display: none;
+  }
+}

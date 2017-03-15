@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 500px;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+img[src=""] {
+  content:url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==");
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  height: 100%;
+
+
+  > figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    backface-visibility: hidden;
+    height: 100%;
+  }
+
+  > .front {
+    background: red;
+  }
+
+  > .back {
+    background: blue;
+    transform: rotateY(180deg);
+  }
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}

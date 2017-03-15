@@ -1,0 +1,35 @@
+### Based on node official
+FROM mhart/alpine-node:6.7.0
+MAINTAINER Omri Keret <omri.keret@apester.com>
+LABEL version="0.2"
+
+### Update packages && install packages
+RUN apk update && apk add \
+    ruby \
+    python \
+    make \
+    g++
+
+### Create Source Directory
+RUN mkdir /src
+
+### Copy code
+COPY . /src
+
+### Create environment variables
+ENV APE_ENV production
+
+### Compile the Code
+WORKDIR /src
+
+### Exposes node port
+EXPOSE 3011
+
+### Build the app
+RUN npm install
+RUN npm run build
+
+### Run Command
+CMD npm run start-prod
+
+#Status API Training Shop Blog About

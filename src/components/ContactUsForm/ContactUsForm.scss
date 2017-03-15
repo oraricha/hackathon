@@ -1,0 +1,107 @@
+$tablet: 1240px;
+
+.sm {
+  height: 100%;
+  display: none;
+}
+
+.lg {
+  height: 100%;
+  display: block;
+  margin-bottom: 11px;
+}
+
+@media (max-width: $tablet) {
+  .lg {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+    min-height: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .sm {
+    display: none;
+  }
+}
+
+.select-style {
+  background: rgba(255,255,255,0.25);
+  height: 45px;
+  width: 98.2%;
+  overflow: hidden;
+  text-align: right;
+  font-size: 18px;
+  color: #FFFFFF;
+
+  select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.inputField {
+  padding-left: 7px;
+  border: 0 solid;
+}
+
+textarea {
+  padding: 10px 7px 0;
+  resize: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+.container {
+  height: 100%;
+  width: 90%;
+  max-width: 365px;
+  margin-left: 20px;
+
+  .header {
+    font-size: 24px;
+    font-family: Lora;
+    font-weight: 400;
+    font-style: italic;
+    color: #DBDBDB;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .subHeader {
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 400;
+    font-style: italic;
+    color: #DBDBDB;
+    width: 70%;
+    max-width: 240px;
+    margin-top: 10px;
+  }
+
+  .button {
+    text-align: center;
+    background-color: #3E81E6;
+    height: 60px;
+    position: absolute;
+    bottom: 8%;
+    max-width: 290px;
+    width: 80%;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 800;
+    padding-top: 15px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

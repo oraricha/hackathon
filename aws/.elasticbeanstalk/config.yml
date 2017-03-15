@@ -1,0 +1,11 @@
+branch-defaults:
+  default:
+    environment: destination-client
+    group_suffix: null
+global:
+  application_name: apester-destination-client
+  default_ec2_keyname: Staging-2016
+  default_platform: Docker 1.11.2
+  default_region: us-east-1
+  profile: null
+  sc: null

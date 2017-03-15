@@ -1,0 +1,239 @@
+$tablet: 490px;
+
+.navbar {
+  width: 100%;
+  background: rgba(0,0,0,1);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  .left {
+    float: left;
+    display: inline-flex;
+
+    .logo {
+      background: url("../../../static/logo.svg") no-repeat;
+      display: inline-block;
+      height: 20px;
+      width: 120px;
+      margin: 20px 0 0 20px;
+
+      &:hover {
+        opacity: 0.8;
+        transition: opacity 0.5s ease-out;
+      }
+    }
+
+    .category {
+      display: flex;
+      margin: 4px 0;
+    }
+
+  }
+
+  .right {
+    float: right;
+    display: inline-flex;
+
+    .search {
+      margin: 20px 20px 0 0px;
+      display: inline-block;
+      float: right;
+      color: white;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 2.4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      span {
+        margin-left: 7px;
+      }
+
+      i {
+        margin-top: 3px;
+        display: inline-block;
+      }
+
+      &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.5s ease-out;
+      }
+
+      &.search-open {
+        span {
+          margin-left: 9px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .menu {
+      margin: 20px 20px 0 0;
+      float: right;
+      color: white;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 2.4px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: none;
+    }
+
+    .start {
+      opacity: 1.0;
+      background-color: rgba(238, 46, 61, 1);
+      border: solid transparent 3px;
+      cursor: pointer;
+      margin: 16px 10px;
+      right: 9px;
+      position: relative;
+      min-width: 120px;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2.4px;
+      font-family: 'Lato';
+      font-weight: bold;
+      font-size: 12px;
+
+      p {
+        transition: color 0.4s ease 0s;
+        color: #FFFFFF;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 2px 0;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        opacity: 0.8;
+        transition: opacity 0.5s ease-out;
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .navbar {
+    .left {
+      .md {
+        display: none;
+      }
+    }
+    .right {
+      .menu {
+        margin: 22px 20px 0 0;
+        display: inline-block;
+        span {
+          display: none;
+        }
+
+        i {
+          font-size: 12px;
+        }
+        &.menu-open {
+
+          span {
+            display: inline-block;
+            margin-left: 9px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .start {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+
+    .right {
+      .menu {
+        margin: 22px 20px 0 0;
+        display: inline-block;
+        span {
+          display: none;
+        }
+
+        i {
+          font-size: 12px;
+        }
+        &.menu-open {
+
+          span {
+            display: inline-block;
+            margin-left: 9px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .start {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .navbar {
+    .left {
+
+      .logo {
+        height: 18px;
+        margin-top: 21px;
+      }
+
+      .category, .md {
+        display: none;
+      }
+    }
+
+    .right {
+      .search {
+        margin: 20px 20px 0 0;
+
+        span {
+          display: none;
+        }
+
+        i {
+          font-size: 16px;
+        }
+      }
+      .menu {
+        display: inline-block;
+        span {
+         display: none;
+        }
+
+        i {
+          font-size: 16px;
+        }
+
+        &.menu-open {
+          span {
+            display: none;
+          }
+        }
+      }
+      .start {
+        display: none;
+      }
+    }
+  }
+}

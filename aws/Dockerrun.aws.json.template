@@ -1,0 +1,17 @@
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "apester/destination-client:<TAG>",
+    "Update": "true"
+  },
+  "Authentication": {
+      "Bucket": "apester-docker",
+      "Key": "docker/.dockercfg"
+  },
+  "Ports": [
+    {
+      "ContainerPort": "3011"
+    }
+  ],
+  "Logging": "/var/log/"
+}

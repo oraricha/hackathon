@@ -1,0 +1,56 @@
+$dark-grey: #252424 !default;
+
+$page-header-height: 275px;
+
+.main {
+  margin-top: $page-header-height;
+  background: $dark-grey;
+  box-shadow: -10px -10px 60px 4px rgba(7, 7, 7, 0.75);
+  position: relative;
+}
+
+$tablet: 640px;
+
+.sm, .md {
+  display: none;
+}
+
+.xlg {
+  display: none;
+}
+
+@media (max-width: $tablet) {
+  .lg {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+
+  .xlg {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg {
+    display: none;
+  }
+
+  .md {
+    display: block;
+  }
+
+  .xlg {
+    display: none;
+  }
+}
+
+@media (min-width: 1600px) {
+  .xlg {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}

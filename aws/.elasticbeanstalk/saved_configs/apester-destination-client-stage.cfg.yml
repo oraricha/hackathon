@@ -1,0 +1,102 @@
+EnvironmentConfigurationMetadata:
+  Description: Configuration for apester destination client stage environment
+  DateCreated: '1465979775000'
+  DateModified: '1465979775000'
+SolutionStack: 64bit Amazon Linux 2016.03 v2.1.6 running Docker 1.11.2
+OptionSettings:
+  aws:elasticbeanstalk:command:
+    BatchSize: '30'
+    BatchSizeType: Percentage
+  aws:elasticbeanstalk:sns:topics:
+    Notification Endpoint: 'omri.keret@apester.com'
+  aws:elb:policies:
+    ConnectionDrainingEnabled: true
+    ConnectionDrainingTimeout: '5'
+  aws:elb:healthcheck:
+    UnhealthyThreshold: '2'
+    Timeout: '4'
+    HealthyThreshold: '2'
+    Interval: '300'
+  aws:elb:loadbalancer:
+     LoadBalancerHTTPSPort: '443'
+     CrossZone: true
+     SSLCertificateId: arn:aws:iam::148612970729:server-certificate/cloudfront/apester-2016
+  aws:elasticbeanstalk:environment:
+    ServiceRole: aws-elasticbeanstalk-service-role
+  aws:elasticbeanstalk:application:
+    Application Healthcheck URL: ''
+  aws:autoscaling:trigger:
+     LowerThreshold: '2'
+     MeasureName: Latency
+     UpperThreshold: '20'
+     Unit: Seconds
+  aws:elasticbeanstalk:healthreporting:system:
+    AWSEBHealthdGroupId: e8423e88-2d0b-4b3c-977e-f52c9252bef5
+    SystemType: enhanced
+  aws:autoscaling:launchconfiguration:
+    IamInstanceProfile: aws-elasticbeanstalk-ec2-role
+    InstanceType: t2.small
+    EC2KeyName: Staging-2016
+    SecurityGroups: sg-441d4e3d
+  aws:autoscaling:asg:
+    MinSize: '1'
+    MaxSize: '1'
+  aws:autoscaling:updatepolicy:rollingupdate:
+    RollingUpdateType: Health
+    RollingUpdateEnabled: true
+  aws:ec2:vpc:
+    VPCId: vpc-d9c7e9bc
+    Subnets: subnet-5c0c2766
+    ELBSubnets: subnet-5c0c2766
+    AssociatePublicIpAddress: true
+EnvironmentTier:
+  Type: Standard
+  Name: WebServer
+Extensions:
+  DestinationApiStageCPUProblem.EBConsoleSnippet:
+    Order: 500
+    SnippetContents:
+      Resources:
+        DestinationApiStageCPUProblem:
+          Type: AWS::CloudWatch::Alarm
+          Properties:
+            AlarmActions:
+            - arn:aws:sns:us-east-1:148612970729:DestinationApiStageCPUProblem
+            MetricName: CPUUtilization
+            ComparisonOperator: GreaterThanThreshold
+            Statistic: Average
+            Period: 300
+            Dimensions:
+            - Value:
+                Ref: AWSEBAutoScalingGroup
+              Name: AutoScalingGroupName
+            EvaluationPeriods: 1
+            InsufficientDataActions: []
+            Namespace: AWS/EC2
+            OKActions:
+            - arn:aws:sns:us-east-1:148612970729:DestinationApiStageCPUProblem
+            Threshold: 50
+  DestinationApiStageMaxLatency.EBConsoleSnippet:
+    Order: 500
+    SnippetContents:
+      Resources:
+        DestinationApiStageMaxLatency:
+          Type: AWS::CloudWatch::Alarm
+          Properties:
+            AlarmActions:
+            - arn:aws:sns:us-east-1:148612970729:DestinationApiStageMaxLatency
+            MetricName: Latency
+            ComparisonOperator: GreaterThanThreshold
+            Statistic: Average
+            Period: 300
+            Dimensions:
+            - Value:
+                Ref: AWSEBLoadBalancer
+              Name: LoadBalancerName
+            EvaluationPeriods: 1
+            InsufficientDataActions: []
+            Namespace: AWS/ELB
+            OKActions:
+            - arn:aws:sns:us-east-1:148612970729:DestinationApiStageMaxLatency
+            Threshold: 7
+AWSConfigurationTemplateVersion: 1.1.0.0
