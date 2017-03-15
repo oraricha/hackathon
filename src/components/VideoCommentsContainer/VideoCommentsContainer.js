@@ -7,8 +7,9 @@ function getContent() {
 
 const VideoCommentsContainer = () => {
   const content = getContent();
+  const styles = require('./VideoCommentsContainer.scss');
   return (
-    <ul style={{listStyleType: 'none', margin: '0', padding: '0', overflow: 'hidden'}}>
+    <ul className={styles.list}>
       {content}
       {content}
       {content}

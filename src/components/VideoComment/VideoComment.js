@@ -1,16 +1,18 @@
 import React from 'react';
+const styles = require('./VideoComment.scss');
 
 function getContent() {
   return (
     <img src="https://ig-s-a-a.akamaihd.net/hphotos-ak-xta1/t51.2885-15/s1080x1080/e15/fr/16908640_1939071232978320_3200677111505354752_n.jpg"
-    style={{width: '47px', height: '47px', borderRadius: '23.5px', margin: '0 10px'}}/>
+         className={styles.image}/>
     );
 }
 
 const VideoComment = () => {
   const content = getContent();
+
   return (
-    <li style={{float: 'left'}}>
+    <li className={styles.item}>
       {content}
     </li>
   );
