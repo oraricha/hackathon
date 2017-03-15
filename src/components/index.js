@@ -47,6 +47,7 @@ export SocialShare from './SocialShare/SocialShare';
 export StatusPanel from './StatusPanel/StatusPanel';
 export CustomError from './CustomError/CustomError';
 export ShareOverlay from './ShareOverlay/ShareOverlay';
+export VideoPlayer from './VideoPlayer/VideoPlayer';
 export GrowingOverlay from './GrowingOverlay/GrowingOverlay';
 export TileCarusel from './TileCarusel/TileCarusel';
 export CategoriesMenu from './CategoriesMenu/CategoriesMenu';

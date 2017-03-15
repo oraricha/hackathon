@@ -6,6 +6,7 @@ const LOAD_RELATED_SUCCESS = 'media/LOAD_RELATED_SUCCESS';
 const LOAD_RELATED_FAIL = 'media/LOAD_RELATED_FAIL';
 const CLOSE_OVERLAY = 'media/CLOSE_OVERLAY';
 const OPEN_AUTOPLAY = 'media/OPEN_AUTOPLAY';
+const TOGGLE_OVERLAY = 'media/TOGGLE_OVERLAY';
 const OPEN_EMBED = 'media/OPEN_EMBED';
 const isServer = (typeof window === 'undefined');
 const initialState = {
@@ -69,7 +70,11 @@ export default function reducer(state = initialState, action = {}) {
         loaded: false,
         error: action.error,
       };
-
+    case TOGGLE_OVERLAY:
+      return {
+        ...state,
+        overlay: !state.overlay,
+      };
     case CLOSE_OVERLAY:
       return {
         ...state,
@@ -118,7 +123,7 @@ export function loadRelated(id) {
 
 export function toggleOverlay() {
   return {
-    type: CLOSE_OVERLAY,
+    type: TOGGLE_OVERLAY,
   };
 }
 

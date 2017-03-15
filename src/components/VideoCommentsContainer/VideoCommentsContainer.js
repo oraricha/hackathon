@@ -1,21 +1,26 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {VideoComment} from 'components';
 
-function getContent() {
-  return (<VideoComment/>);
+function getContent(videoHandler) {
+  return (<VideoComment clickHandler={(param) => {
+    if (videoHandler) {
+      videoHandler(param);
+    }
+  }}/>);
 }
 
-const VideoCommentsContainer = () => {
-  const content = getContent();
+const VideoCommentsContainer = (props) => {
+  const content = getContent(props.videoHandler);
+  const styles = require('./VideoCommentsContainer.scss');
   return (
-    <ul style={{listStyleType: 'none', margin: '0', padding: '0', overflow: 'hidden'}}>
-      {content}
-      {content}
+    <ul className={styles.list}>
       {content}
     </ul>
   );
 };
 
-VideoCommentsContainer.propTypes = {};
+VideoCommentsContainer.propTypes = {
+  videoHandler: PropTypes.func,
+};
 
 export default VideoCommentsContainer;
