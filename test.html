@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script
+          src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+          integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+          crossorigin="anonymous"></script>
+</head>
+<body>
+<span id="result"></span><br>
+<button id="video">Record video</button> <button id="sound">Record sound</button><br>
+<span id="name"></span>
+
+<script>
+//  navigator.mediaDevices.getUserMedia({video: true, audio: true})
+//          .then(function(stream) {
+//            var videoTracks = stream.getVideoTracks();
+//            console.log('Got stream with constraints:', {video: true, audio: true});
+//            console.log('Using video device: ' + videoTracks[0].label);
+//            stream.onended = function() {
+//              console.log('Stream ended');
+//            };
+//            window.stream = stream; // make variable available to console
+//            video.srcObject = stream;
+//          })
+//          .catch(function(error) {
+//            // ...
+//          })
+  $("button").click(do_it);
+
+  function do_it() {
+    var obj = {}, txt="";
+    if (this.id == "video") {
+      obj = {
+        video: true,
+        audio: true
+      };
+      txt = "<video>";
+    } else {
+      obj = {
+        video: false,
+        audio: true
+      };
+      txt = "<audio>";
+    }
+//    navigator.webkitGetUserMedia({video: true, audio: true}, function(stream) {
+    navigator.mediaDevices.getUserMedia({video: true, audio: true}, function(stream) {
+      $("#result").empty();
+//      var output = $(txt).appendTo("#result")[0],
+      var output = $("<video>").appendTo("#result")[0],
+//              source = window.webkitURL.createObjectURL(stream);
+              source = stream;
+      output.autoplay = true;
+      output.src = source;
+      console.log(stream);
+      window.a = stream; //debug
+      $("span#name").html("Camera name: <b>" + stream.videoTracks[0].label + "</b><br>" + "Mic name: <b>" + stream.audioTracks[0].label + "</b>");
+    }, function(err) {
+      console.log(err);
+      err.code == 1 && (alert("You can click the button again anytime to enable."))
+    });
+  }
+</script>
+</body>
+</html>
