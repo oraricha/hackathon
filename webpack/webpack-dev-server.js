@@ -7,8 +7,11 @@ var compiler = webpack(webpackConfig);
 
 var host = config.host || 'localhost';
 var port = (Number(config.port) + 1) || 3001;
+// var host = 'devserver.ssl.oraricha';
+// var port = 443;
 var serverOptions = {
-  contentBase: 'http://' + host + ':' + port,
+  // contentBase: 'http://' + host + ':' + port,
+  contentBase: 'https://devserver.ssl.oraricha',
   quiet: true,
   noInfo: true,
   hot: true,
