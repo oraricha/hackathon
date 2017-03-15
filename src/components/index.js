@@ -52,4 +52,7 @@ export TileCarusel from './TileCarusel/TileCarusel';
 export CategoriesMenu from './CategoriesMenu/CategoriesMenu';
 export Contacts from './Contacts/Contacts.js';
 export ContactUsForm from './ContactUsForm/ContactUsForm';
+//
+export VideoComment from './VideoComment/VideoComment';
+export VideoCommentsContainer from './VideoCommentsContainer/VideoCommentsContainer';
 

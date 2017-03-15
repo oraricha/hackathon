@@ -9,7 +9,7 @@ import {
 import {push} from 'react-router-redux';
 import config from '../../config';
 import {asyncConnect} from 'redux-async-connect';
-import {NavBar, Footer, Search, CategoriesMenu} from 'components';
+// import {NavBar, Footer, Search, CategoriesMenu} from 'components';
 import {StyleRoot} from 'radium';
 import ReactGA from 'react-ga';
 import * as searchActions from 'redux/modules/search';
@@ -141,34 +141,15 @@ export default class App extends Component {
 
   render() {
     const styles = require('./App.scss');
-    const {overlay, toggleSearch, menuOpened, dispatch, closeMenu} = this.props;
-    const showSelectedCategory = this.isDiscoverPage();
+    // const {overlay, toggleSearch, menuOpened, dispatch, closeMenu} = this.props;
+    // const showSelectedCategory = this.isDiscoverPage();
     return (
         <StyleRoot className="Apester">
           <div>
             <Helmet {...config.app.head}/>
-            <NavBar dispatch={dispatch}
-                    currentPath={this.currentPath()}
-                    searchOpened={overlay}
-                    showSelectedCategory={showSelectedCategory}
-                    toggleMenu={this.openMenu.bind(this)}
-                    closeMenu={this.closeMenu.bind(this)}
-                    menuOpened={menuOpened}
-                    handleSelectedCategory={this.selectedCategoryHandler.bind(this)}
-            />
             <div className={styles.appContent}>
-              <Search overlay={overlay}
-                      toggleSearch={toggleSearch}
-                      onSubmit={this.handleSubmit.bind(this)}
-              />
-              <CategoriesMenu toggled={menuOpened}
-                              dispatch={dispatch}
-                              closeMenu={closeMenu}
-                              handleSelectedCategory={this.selectedCategoryHandler.bind(this)}
-              />
               {this.props.children}
             </div>
-            <Footer dispatch={dispatch}/>
           </div>
         </StyleRoot>
     );
