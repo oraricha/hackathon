@@ -9,7 +9,8 @@ class VideoPlayer extends Component {
       isRecording: false,
       recordVideo: null,
       uploading: false,
-      uploadSuccess: null
+      uploadSuccess: null,
+      stream: null
     };
 
     this.startRecord = this.startRecord.bind(this);
@@ -40,16 +41,26 @@ class VideoPlayer extends Component {
   startRecord(stream) {
     this.setState({
       isRecording: true,
-      recordVideo: RecordRTC(stream, { type: 'video' })
+      recordVideo: RecordRTC(stream, { type: 'video' }),
+      stream: stream
     });
     // this.state.recordVideo = RecordRTC(stream, { type: 'video' });
     this.state.recordVideo.startRecording();
+  }
+  
+  stopStream() {
+    console.log('tracks: ', this.state.stream.getTracks());
+    const audioTrack = this.state.stream.getTracks()[0];
+    const videoTrack = this.state.stream.getTracks()[1];
+    audioTrack.stop();
+    videoTrack.stop();
   }
 
   stopRecord() {
     this.setState({isRecording: false});
     this.state.recordVideo.stopRecording(() => {
-      const recorder = this.refs.recorder;
+      this.stopStream();
+      // const recorder = this.refs.recorder;
       // let params = {
       //   type: 'video/webm',
       //   data: this.state.recordVideo.blob,
@@ -57,7 +68,11 @@ class VideoPlayer extends Component {
       // };
 
       // recorder.src = this.state.recordVideo.blob;
-      const videoFile = this.state.recordVideo.blob;
+  
+
+      // get the video file
+      // const videoFile = this.state.recordVideo.blob;
+
       // this.setState({ uploading: true });
 
       // S3Upload(params)
