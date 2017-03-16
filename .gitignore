@@ -3,3 +3,5 @@ node_modules/*
 static/dist/*
 npm-debug.log
 node_modules
+webpack-assets.json
+test.html

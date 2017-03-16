@@ -1,0 +1,22 @@
+.record-btn {
+  height: 60px;
+  width: 60px;
+  background: #EE2E3D;
+  //outline: 1px solid white;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 0 3px #fff inset;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+
+  &.active:after {
+    content: 'll';
+    display: block;
+    font-size: 27px;
+    color: white;
+    font-weight: bold;
+  }
+}

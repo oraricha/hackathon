@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import {
   MediaUnit,
   VideoCommentsContainer,
-  VideoPlayer,
+  VideoRecorder,
 } from 'components';
 import {Grid, Cell} from 'radium-grid';
 import * as mediaActions from 'redux/modules/media';
@@ -140,7 +140,7 @@ class Media extends Component {
                                overlay={overlay} height={height}
                                loadingBarActions={loadingBarActions}
                                src={`//renderer.qmerce.com/interaction/${mediaId}?apesterDiscover=true`}>
-                      <VideoPlayer url={this.state.videoURL} autoPlay={overlay}/>
+                      <VideoRecorder url={this.state.videoURL} autoPlay={overlay}/>
                     </MediaUnit>
                   </Cell>
                   <Cell cellWidth="1/4"/>
@@ -168,7 +168,8 @@ class Media extends Component {
                            overlay={overlay} height={height}
                            loadingBarActions={loadingBarActions}
                            src={`//renderer.qmerce.com/interaction/${mediaId}?apesterDiscover=true`}>
-                  <VideoPlayer url={this.state.videoURL} autoPlay={overlay}/></MediaUnit>
+                  <VideoRecorder url={this.state.videoURL} autoPlay={overlay}/>
+                </MediaUnit>
               </Cell>
               <Cell>
                 <Block mx={3} my={3}>
