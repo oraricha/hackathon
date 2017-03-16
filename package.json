@@ -153,6 +153,7 @@
     "react-router-scroll": "^0.3.2",
     "react-youtube": "^7.3.0",
     "rebass": "^0.3.2",
+    "recordrtc": "^5.4.1",
     "redux": "^3.0.4",
     "redux-async-connect": "^1.0.0-rc4",
     "redux-connect": "^3.0.0",
