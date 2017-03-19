@@ -150,7 +150,7 @@ class Media extends Component {
                 <Grid>
                   <Cell cellWidth="1/4"/>
                   <Cell cellWidth="1/2">
-                    <Block mx={1} my={2}>
+                    <Block mx={0} my={0} style={{width: '100%', backgroundColor: '#303030'}}>
                       <VideoCommentsContainer videoHandler={this.handleVideoCommentClick.bind(this)}/>
                     </Block>
                   </Cell>
@@ -172,7 +172,7 @@ class Media extends Component {
                 </MediaUnit>
               </Cell>
               <Cell>
-                <Block mx={3} my={3}>
+                <Block mx={0} my={0} style={{width: '100%', backgroundColor: '#303030'}}>
                   <VideoCommentsContainer videoHandler={this.handleVideoCommentClick}/>
                 </Block>
               </Cell>

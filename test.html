@@ -45,8 +45,8 @@
       };
       txt = "<audio>";
     }
-//    navigator.webkitGetUserMedia({video: true, audio: true}, function(stream) {
-    navigator.mediaDevices.getUserMedia({video: true, audio: true}, function(stream) {
+    navigator.webkitGetUserMedia({video: true, audio: true}, function(stream) {
+//    navigator.mediaDevices.getUserMedia({video: true, audio: true}, function(stream) {
       $("#result").empty();
 //      var output = $(txt).appendTo("#result")[0],
       var output = $("<video>").appendTo("#result")[0],

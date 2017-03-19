@@ -7,5 +7,14 @@
     border-radius: 23.5px;
     margin-right: 10px;
     cursor: pointer;
+    background: #606060;
+
+    &:after {
+      content: '+';
+      color: white;
+      font-size: 34px;
+      display: inline-block;
+      padding: 0px 14px;
+    }
   }
 }

@@ -3,7 +3,7 @@ const styles = require('./VideoComment.scss');
 
 function getContent(placeHolder, clickHandler, videoURL) {
   return (
-    <img src={placeHolder} className={styles.image} onClick={() => {
+    <div className={styles.image} onClick={() => {
       if (clickHandler && videoURL) {
         clickHandler(videoURL);
       }

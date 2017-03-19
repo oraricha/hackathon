@@ -135,6 +135,7 @@
     "nuka-carousel": "^2.0.3",
     "object-fit-images": "^2.5.9",
     "piping": "^0.3.0",
+    "pkgcloud": "^1.4.0",
     "pretty-error": "^1.2.0",
     "radium": "^0.18.1",
     "radium-grid": "^2.0.3",

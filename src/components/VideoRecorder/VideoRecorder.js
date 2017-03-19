@@ -1,5 +1,6 @@
 import React, {Component, PropTypes} from 'react';
 import RecordRTC from 'recordrtc';
+// import 'whatwg-fetch'; // https://github.com/github/fetch
 
 class VideoPlayer extends Component {
 
@@ -15,6 +16,10 @@ class VideoPlayer extends Component {
 
     this.startRecord = this.startRecord.bind(this);
     this.stopRecord = this.stopRecord.bind(this);
+  }
+
+  componentDidMount() {
+    this.auth();
   }
 
   // updatePlayerState() {
@@ -38,6 +43,37 @@ class VideoPlayer extends Component {
   //   }
   // }
 
+  auth() {
+    const url = 'https://identity.api.rackspacecloud.com/v2.0/tokens';
+    const authData = { "auth": { "RAX-KSKEY:apiKeyCredentials" : { "username": "hasansa", "apiKey": "b86cc9ee0d054accb0a298a8729c0ace" } } }; // eslint-disable-line
+
+    const xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+    xmlhttp.open('POST', url);
+    xmlhttp.setRequestHeader('Content-Type', 'application/json');
+    xmlhttp.send(JSON.stringify(authData));
+
+    xmlhttp.onreadystatechange = (error) => {
+      if ((xmlhttp.status === 200) && (xmlhttp.responseText)) {
+        console.log(xmlhttp.responseText);
+      } else {
+        console.warn('error', error);
+      }
+    };
+
+    // fetch(url, {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     // 'Accept': 'application/json'
+    //   },
+    //   body: JSON.stringify(authData)
+    // }).then(data => { // eslint-disable-line
+    //   console.log(data);
+    // }).catch(error => {
+    //   console.error('request failed', error);
+    // });
+  }
+
   startRecord(stream) {
     this.setState({
       isRecording: true,
@@ -47,9 +83,9 @@ class VideoPlayer extends Component {
     // this.state.recordVideo = RecordRTC(stream, { type: 'video' });
     this.state.recordVideo.startRecording();
   }
-  
+
   stopStream() {
-    console.log('tracks: ', this.state.stream.getTracks());
+    // console.log('tracks: ', this.state.stream.getTracks());
     const audioTrack = this.state.stream.getTracks()[0];
     const videoTrack = this.state.stream.getTracks()[1];
     audioTrack.stop();
@@ -57,10 +93,17 @@ class VideoPlayer extends Component {
   }
 
   stopRecord() {
-    this.setState({isRecording: false});
+    this.setState({ isRecording: false });
     this.state.recordVideo.stopRecording(() => {
       this.stopStream();
-      // const recorder = this.refs.recorder;
+
+      // get the video we just recorded
+      const vidUrl = window.webkitURL.createObjectURL(this.state.recordVideo.blob);
+      
+      const recorder = this.refs.recorder;
+      
+      // assign it to the recorder player just for demonstration
+      recorder.src = vidUrl;
       // let params = {
       //   type: 'video/webm',
       //   data: this.state.recordVideo.blob,
@@ -68,12 +111,14 @@ class VideoPlayer extends Component {
       // };
 
       // recorder.src = this.state.recordVideo.blob;
-  
 
       // get the video file
       // const videoFile = this.state.recordVideo.blob;
 
-      // this.setState({ uploading: true });
+      this.setState({ uploading: true });
+
+
+      // Uploader.upload(videoFile);
 
       // S3Upload(params)
       //   .then((success) => {
