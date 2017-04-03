@@ -1,6 +1,6 @@
 {
   "javascript": {
-    "main": "https://devserver.ssl.oraricha/dist/main-987e5390cbd1732da0da.js"
+    "main": "https://devserver.ssl.oraricha/dist/main-4034cd45f1dc3d6edeff.js"
   },
   "styles": {},
   "assets": {
@@ -470,6 +470,11 @@
       "list": "list___1WZGT",
       "_style": ".header___Dto6L {\n  font-size: 16px;\n  font-weight: 600;\n  text-transform: uppercase;\n  margin-bottom: 30px;\n  color: white;\n}\n\n.list___1WZGT {\n  width: 280px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.list___1WZGT button {\n  margin-bottom: 10px;\n}\n"
     },
+    "./src/components/VideoRecorder/VideoRecorder.scss": {
+      "record-btn": "record-btn___anmUB",
+      "active": "active___2bgrT",
+      "_style": ".record-btn___anmUB {\n  height: 60px;\n  width: 60px;\n  background: #EE2E3D;\n  border-radius: 50%;\n  border: none;\n  box-shadow: 0 0 0 3px #fff inset;\n  margin: 0 auto;\n  position: absolute;\n  bottom: 20px;\n  left: 0;\n  right: 0;\n}\n\n.record-btn___anmUB.active___2bgrT:after {\n  content: 'll';\n  display: block;\n  font-size: 27px;\n  color: white;\n  font-weight: bold;\n}\n"
+    },
     "./src/components/TileCarusel/TileCarusel.scss": {
       "container": "container___3-1wt",
       "step": "step___UhGQY",
@@ -521,6 +526,15 @@
       "subHeader": "subHeader___25HoX",
       "button": "button___3M2te",
       "_style": ".sm___1a0gH {\n  height: 100%;\n  display: none;\n}\n\n.lg___3jaOh {\n  height: 100%;\n  display: block;\n  margin-bottom: 11px;\n}\n\n@media (max-width: 1240px) {\n  .lg___3jaOh {\n    display: none;\n  }\n  .sm___1a0gH {\n    display: block;\n    min-height: 100%;\n  }\n}\n\n@media (min-width: 1600px) {\n  .sm___1a0gH {\n    display: none;\n  }\n}\n\n.select-style___1jNB8 {\n  background: rgba(255, 255, 255, 0.25);\n  height: 45px;\n  width: 98.2%;\n  overflow: hidden;\n  text-align: right;\n  font-size: 18px;\n  color: #FFFFFF;\n}\n\n.select-style___1jNB8 select {\n  background: transparent;\n  border: none;\n  font-size: 14px;\n  height: 100%;\n  width: 100%;\n}\n\n.inputField___1ccJ6 {\n  padding-left: 7px;\n  border: 0 solid;\n}\n\ntextarea {\n  padding: 10px 7px 0;\n  resize: none;\n}\n\n*:focus {\n  outline: none;\n}\n\n.container___3-s4c {\n  height: 100%;\n  width: 90%;\n  max-width: 365px;\n  margin-left: 20px;\n}\n\n.container___3-s4c .header___3RW8f {\n  font-size: 24px;\n  font-family: Lora;\n  font-weight: 400;\n  font-style: italic;\n  color: #DBDBDB;\n  width: 100%;\n  margin-bottom: 10px;\n}\n\n.container___3-s4c .subHeader___25HoX {\n  font-size: 16px;\n  font-family: Lato;\n  font-weight: 400;\n  font-style: italic;\n  color: #DBDBDB;\n  width: 70%;\n  max-width: 240px;\n  margin-top: 10px;\n}\n\n.container___3-s4c .button___3M2te {\n  text-align: center;\n  background-color: #3E81E6;\n  height: 60px;\n  position: absolute;\n  bottom: 8%;\n  max-width: 290px;\n  width: 80%;\n  font-size: 16px;\n  font-family: Lato;\n  font-weight: 800;\n  padding-top: 15px;\n}\n\n.container___3-s4c .button___3M2te a {\n  text-decoration: none;\n}\n"
+    },
+    "./src/components/VideoComment/VideoComment.scss": {
+      "item": "item___-oShE",
+      "image": "image___TJETu",
+      "_style": ".item___-oShE {\n  float: left;\n}\n\n.item___-oShE .image___TJETu {\n  width: 47px;\n  height: 47px;\n  border-radius: 23.5px;\n  margin-right: 10px;\n  cursor: pointer;\n  background: #606060;\n}\n\n.item___-oShE .image___TJETu:after {\n  content: '+';\n  color: white;\n  font-size: 34px;\n  display: inline-block;\n  padding: 0px 14px;\n}\n"
+    },
+    "./src/components/VideoCommentsContainer/VideoCommentsContainer.scss": {
+      "list": "list___2aBns",
+      "_style": ".list___2aBns {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\n"
     },
     "./src/containers/Discover/Discover.scss": {
       "container": "container___U_fq2",

@@ -99,9 +99,9 @@ class VideoPlayer extends Component {
 
       // get the video we just recorded
       const vidUrl = window.webkitURL.createObjectURL(this.state.recordVideo.blob);
-      
+
       const recorder = this.refs.recorder;
-      
+
       // assign it to the recorder player just for demonstration
       recorder.src = vidUrl;
       // let params = {
